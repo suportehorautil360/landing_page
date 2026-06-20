@@ -2,6 +2,7 @@
 
 import { IconCamera, IconLocation, IconShield } from "./icons";
 import { FadeIn, HoverLift, Stagger, StaggerItem, motion } from "./motion";
+import { ScrollVideo } from "./scroll-video";
 
 const SECURITY_FEATURES = [
   {
@@ -63,6 +64,10 @@ export function Security() {
             </StaggerItem>
           ))}
         </Stagger>
+
+        <div className="mt-14">
+          <ScrollVideo src="/video_landing_page.mp4" />
+        </div>
       </div>
     </section>
   );
