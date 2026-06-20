@@ -64,7 +64,7 @@ export function Footer() {
                 whileHover={{ rotate: 2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
-                <Logo />
+                <Logo size="lg" />
               </motion.div>
             </a>
 

@@ -28,7 +28,7 @@ export function Navbar() {
                 whileHover={{ rotate: 2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
-                <Logo priority />
+                <Logo priority size="lg" />
               </motion.div>
             </motion.a>
 
