@@ -10,6 +10,7 @@ import {
   WHATSAPP_URL,
 } from "./constants";
 import { IconWhatsApp } from "./icons";
+import { Logo } from "./logo";
 import { FadeIn, Stagger, StaggerItem, motion } from "./motion";
 
 function FooterLink({
@@ -58,22 +59,13 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
           {/* Marca */}
           <FadeIn direction="left" className="lg:col-span-4">
-            <a href="#" className="group inline-flex items-center gap-3">
-              <motion.span
-                whileHover={{ rotate: 5, scale: 1.05 }}
+            <a href="#" className="group inline-flex">
+              <motion.div
+                whileHover={{ rotate: 2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
-                className="flex h-11 w-11 items-center justify-center rounded-xl bg-orange-500 text-sm font-black text-white shadow-lg shadow-orange-500/25"
               >
-                360
-              </motion.span>
-              <div>
-                <p className="text-lg font-extrabold tracking-tight">
-                  HORA ÚTIL <span className="text-orange-400">360</span>
-                </p>
-                <p className="text-[11px] font-medium uppercase tracking-widest text-slate-500">
-                  Inteligência em Frota
-                </p>
-              </div>
+                <Logo />
+              </motion.div>
             </a>
 
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-slate-400">

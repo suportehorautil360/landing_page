@@ -1,6 +1,11 @@
 "use client";
 
-import { SITE_DISPLAY, SITE_URL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "./constants";
+import {
+  SITE_DISPLAY,
+  SITE_URL,
+  WHATSAPP_DISPLAY,
+  WHATSAPP_URL,
+} from "./constants";
 import { IconWhatsApp } from "./icons";
 import { FadeIn, motion } from "./motion";
 
@@ -70,7 +75,11 @@ export function FooterCta() {
                     ],
                   }}
                   transition={{
-                    boxShadow: { duration: 2.5, repeat: Infinity, ease: "easeInOut" },
+                    boxShadow: {
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    },
                   }}
                   className="mt-5 flex w-full items-center justify-center gap-3 rounded-xl bg-emerald-500 px-6 py-4 text-lg font-bold text-white md:text-xl"
                 >
@@ -79,15 +88,9 @@ export function FooterCta() {
                 </motion.a>
 
                 <div className="mt-5 flex items-center justify-between rounded-xl border border-white/5 bg-white/5 px-4 py-3">
-                  <span className="text-xs text-slate-500">Resposta em até 1 hora útil</span>
-                  <a
-                    href={SITE_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-semibold text-orange-400 transition hover:text-orange-300"
-                  >
-                    {SITE_DISPLAY} →
-                  </a>
+                  <span className="text-xs text-slate-500">
+                    Resposta em até 1 hora útil
+                  </span>
                 </div>
               </motion.div>
             </FadeIn>

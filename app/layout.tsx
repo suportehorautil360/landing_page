@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "Hora Útil 360 — Gestão Operacional de Frotas",
   description:
     "Gestão total de abastecimento, manutenção e pessoas numa única plataforma digital. Visão 360°, 100% digital e monitoramento em tempo real.",
+  icons: {
+    icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "Hora Útil 360 — Gestão Operacional de Frotas",
     description:

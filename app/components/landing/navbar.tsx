@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { NAV_LINKS, WHATSAPP_URL } from "./constants";
+import { Logo } from "./logo";
 import { easeOut } from "./motion";
 
 export function Navbar() {
@@ -21,19 +22,14 @@ export function Navbar() {
             <motion.a
               href="#"
               whileHover={{ scale: 1.02 }}
-              className="group flex items-center gap-2"
+              className="group"
             >
-              <motion.span
-                whileHover={{ rotate: 5, scale: 1.08 }}
+              <motion.div
+                whileHover={{ rotate: 2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
-                className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-500 text-sm font-black text-white shadow-lg shadow-orange-500/30"
               >
-                360
-              </motion.span>
-              <span className="text-lg font-extrabold tracking-tight text-white">
-                HORA ÚTIL{" "}
-                <span className="text-orange-400">360</span>
-              </span>
+                <Logo priority />
+              </motion.div>
             </motion.a>
 
             <nav className="hidden items-center gap-1 md:flex">
