@@ -19,18 +19,9 @@ export function Navbar() {
       <div className="mx-auto max-w-6xl px-4 pt-4">
         <div className="glass-dark rounded-2xl px-5 py-3.5 shadow-2xl shadow-black/20">
           <div className="flex items-center justify-between gap-4">
-            <motion.a
-              href="#"
-              whileHover={{ scale: 1.02 }}
-              className="group"
-            >
-              <motion.div
-                whileHover={{ rotate: 2, scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                <Logo priority size="lg" />
-              </motion.div>
-            </motion.a>
+            <div className="shrink-0">
+              <Logo priority size="nav" />
+            </div>
 
             <nav className="hidden items-center gap-1 md:flex">
               {NAV_LINKS.map((link) => (

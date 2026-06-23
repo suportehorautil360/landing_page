@@ -91,6 +91,14 @@ export function FooterCta() {
                   <span className="text-xs text-slate-500">
                     Resposta em até 1 hora útil
                   </span>
+                  <a
+                    href={SITE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-semibold text-orange-400 transition hover:text-orange-300"
+                  >
+                    {SITE_DISPLAY} →
+                  </a>
                 </div>
               </motion.div>
             </FadeIn>

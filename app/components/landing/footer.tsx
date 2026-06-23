@@ -59,14 +59,9 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
           {/* Marca */}
           <FadeIn direction="left" className="lg:col-span-4">
-            <a href="#" className="group inline-flex">
-              <motion.div
-                whileHover={{ rotate: 2, scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                <Logo size="lg" />
-              </motion.div>
-            </a>
+            <div className="inline-flex">
+              <Logo size="lg" />
+            </div>
 
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-slate-400">
               Plataforma 100% digital para gestão total de abastecimento,

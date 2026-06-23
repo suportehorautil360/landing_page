@@ -2,98 +2,8 @@
 
 import { IconArrowRight } from "./icons";
 import { WHATSAPP_URL } from "./constants";
+import { LogoHero } from "./logo";
 import { FadeIn, Stagger, StaggerItem, motion } from "./motion";
-
-function DashboardPreview() {
-  return (
-    <motion.div
-      animate={{ y: [0, -10, 0] }}
-      transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-      className="relative mx-auto w-full max-w-md lg:max-w-none"
-    >
-      <div className="absolute -inset-4 rounded-3xl bg-orange-500/20 blur-3xl" />
-      <div className="card-shine relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/90 p-5 shadow-2xl backdrop-blur-xl">
-        <div className="mb-5 flex items-center justify-between border-b border-white/10 pb-4">
-          <div>
-            <p className="text-[10px] font-semibold uppercase tracking-widest text-slate-500">
-              Dashboard Interativo
-            </p>
-            <p className="mt-0.5 text-sm font-bold text-white">Visão Geral da Frota</p>
-          </div>
-          <span className="flex items-center gap-1.5 rounded-full bg-emerald-500/15 px-2.5 py-1 text-[10px] font-semibold text-emerald-400">
-            <motion.span
-              className="h-1.5 w-1.5 rounded-full bg-emerald-400"
-              animate={{ opacity: [1, 0.3, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            />
-            Real-Time
-          </span>
-        </div>
-
-        <div className="mb-4 grid grid-cols-2 gap-3">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-            className="rounded-xl bg-white/5 p-4 ring-1 ring-white/10"
-          >
-            <p className="text-[11px] text-slate-400">Equipamentos Ativos</p>
-            <p className="mt-1 text-3xl font-extrabold text-orange-400">87%</p>
-            <div className="mt-2 h-1 overflow-hidden rounded-full bg-slate-700">
-              <motion.div
-                className="h-full rounded-full bg-gradient-to-r from-orange-500 to-orange-300"
-                initial={{ width: 0 }}
-                animate={{ width: "87%" }}
-                transition={{ delay: 1, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-              />
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.75, duration: 0.5 }}
-            className="rounded-xl bg-white/5 p-4 ring-1 ring-white/10"
-          >
-            <p className="text-[11px] text-slate-400">Manutenções Hoje</p>
-            <p className="mt-1 text-3xl font-extrabold text-sky-400">3</p>
-            <p className="mt-2 text-[10px] text-slate-500">2 preventivas · 1 corretiva</p>
-          </motion.div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.5 }}
-          className="rounded-xl bg-white/5 p-4 ring-1 ring-white/10"
-        >
-          <div className="mb-2 flex items-center justify-between">
-            <p className="text-[11px] text-slate-400">Média de Consumo da Frota</p>
-            <span className="text-xs font-bold text-orange-400">74%</span>
-          </div>
-          <div className="h-2 overflow-hidden rounded-full bg-slate-700">
-            <motion.div
-              className="h-full rounded-full bg-gradient-to-r from-orange-600 to-orange-400"
-              initial={{ width: 0 }}
-              animate={{ width: "74%" }}
-              transition={{ delay: 1.2, duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-            />
-          </div>
-        </motion.div>
-
-        <Stagger immediate className="mt-4 grid grid-cols-3 gap-2">
-          {["Combustível", "Manutenção", "Operadores"].map((label, i) => (
-            <StaggerItem key={label}>
-              <div className="rounded-lg bg-white/5 px-2 py-2 text-center ring-1 ring-white/5">
-                <p className="text-[9px] text-slate-500">{label}</p>
-                <p className="text-xs font-bold text-white">{["OK", "3", "42"][i]}</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </div>
-    </motion.div>
-  );
-}
 
 export function Hero() {
   return (
@@ -101,8 +11,8 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-navy-deep/80" />
 
       <div className="relative mx-auto max-w-6xl px-4">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-10 xl:gap-16">
+          <div className="order-2 lg:order-1">
             <FadeIn immediate>
               <span className="inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-orange-300">
                 <motion.span
@@ -176,8 +86,8 @@ export function Hero() {
             </Stagger>
           </div>
 
-          <FadeIn immediate delay={0.25} direction="right" className="lg:pl-4">
-            <DashboardPreview />
+          <FadeIn immediate delay={0.25} direction="right" className="order-1 lg:order-2 lg:pl-2">
+            <LogoHero priority />
           </FadeIn>
         </div>
       </div>
